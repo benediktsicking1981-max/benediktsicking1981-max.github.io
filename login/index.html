@@ -1,0 +1,7 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Tesla Login</title>
+<body style="font-family:sans-serif;max-width:480px;margin:40px auto;padding:0 16px">
+<h2>Tesla-Zugriff freigeben</h2><p>Client-ID deiner App einfuegen und auf Weiter tippen.</p>
+<input id=c style="width:100%;font-size:16px;padding:8px" placeholder="Client-ID"><p><button id=b style="font-size:16px;padding:8px 16px">Weiter</button></p>
+<script>
+document.getElementById('b').onclick=function(){var c=document.getElementById('c').value.trim();if(!c)return;var p=new URLSearchParams({response_type:'code',client_id:c,redirect_uri:'https://benediktsicking1981-max.github.io/callback',scope:'openid offline_access vehicle_device_data vehicle_location vehicle_cmds vehicle_charging_cmds',state:'-jco0YE7TSOYEfYg',locale:'de-DE',prompt_missing_scopes:'true'});location.href='https://auth.tesla.com/oauth2/v3/authorize?'+p.toString();};
+</script>
